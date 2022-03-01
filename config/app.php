@@ -3,7 +3,18 @@
 use Illuminate\Support\Facades\Facade;
 
 return [
-
+    //socialite
+    'providers' => [
+        // Other service providers…
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        //like
+        Overtrue\LaravelLike\LikeServiceProvider::class,
+    ],
+   
+    'aliases' => [
+   // Other aliases…
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    ],
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -15,7 +26,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Void Forum'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +67,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'asset_url' => env('ASSET_URL'),
+    'asset_url' => env('ASSET_URL', null),
 
     /*
     |--------------------------------------------------------------------------
